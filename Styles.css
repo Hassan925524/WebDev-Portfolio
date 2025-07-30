@@ -6,33 +6,74 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* allows wrapping but still symmetrical */
 }
 
 /* NAVBAR */
 .navbar {
     display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
     justify-content: center;
-    padding: 0;
+    flex-wrap: wrap;
+    gap: 15px;
     margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 100%;
 }
 
 .navbar li {
-    display: inline;
-    list-style: none;
+    display: inline-block;
 }
 
 .navbar li a {
     text-decoration: none;
     color: black;
-    font-size: 18px;
-    padding: 5px 10px;
-    display: inline-block;
+    font-size: 20px;
+    padding: 5px 12px;
 }
 
-/* RESPONSIVE FIXES */
+/* MAIN IMAGE */
+.mypic {
+    width: 100%;
+    max-width: 350px;
+    float: none;
+    border: 5px solid;
+    border-radius: 80px;
+    margin: 20px auto;
+    display: block;
+}
+
+/* MAIN CONTENT */
+.main {
+    width: 80%;
+    margin: 60px auto 0;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+/* CONTACT BOX */
+#con {
+    margin: 40px auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+    border: 5px solid white;
+    border-radius: 50px;
+    text-align: center;
+    background-color: grey;
+}
+
+/* BUTTON */
+.btn {
+    color: white;
+    background-color: black;
+    border-radius: 20px;
+    width: 100px;
+    height: 35px;
+}
+
+/* === RESPONSIVE === */
 @media (max-width: 768px) {
     .header {
         flex-direction: column;
@@ -40,47 +81,41 @@
     }
 
     .navbar {
-        flex-direction: row;
-        flex-wrap: wrap;
+        justify-content: center;
         gap: 10px;
     }
 
     .navbar li a {
-        font-size: 16px;
-        padding: 5px;
+        font-size: 18px;
+        padding: 5px 8px;
     }
 
     .mypic {
-        max-width: 220px;
-        float: none;
+        max-width: 250px;
     }
 
     .main {
-        margin-top: 40px;
         width: 90%;
+        margin-top: 30px;
     }
 
     #con {
-        width: 90%;
-        margin: 30px auto;
+        width: 95%;
         font-size: 16px;
     }
 }
 
 @media (max-width: 480px) {
-    .navbar {
-        flex-direction: column;
-    }
-
-    .navbar li {
-        margin-bottom: 8px;
-    }
-
     .navbar li a {
-        font-size: 15px;
+        font-size: 16px;
+        padding: 4px 6px;
     }
 
     .mypic {
-        max-width: 180px;
+        max-width: 200px;
+    }
+
+    .main {
+        font-size: 14px;
     }
 }
